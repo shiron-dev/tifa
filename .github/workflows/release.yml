@@ -43,3 +43,4 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+# TODO: Add a step to deploy the application
