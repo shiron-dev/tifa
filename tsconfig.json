@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es2022",
-    "module": "Node16",
-    "declaration": true,
-    "sourceMap": true,
-    "outDir": "./dist",
-    /* Strict Type-Checking Options */
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "resolveJsonModule": true,
     "strict": true,
-    /* Additional Checks */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "Node16",
+    "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vitest/globals"
-    ]
+    "isolatedModules": true,
+    "skipLibCheck": true
+    // "types": [
+    //   "vitest/globals"
+    // ]
   },
   "include": [
     "**/*.ts"
