@@ -1,0 +1,28 @@
+{
+  "name": "tifa",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "probot run ./dist/index.js",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:fix": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "shiron-dev <shiron4710.dev@gmail.com>",
+  "license": "",
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
+  "dependencies": {
+    "probot": "^13.3.8"
+  },
+  "devDependencies": {
+    "@shiron-dev/eslint-config": "^1.7.0",
+    "@types/node": "^22.7.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
+}
