@@ -6,6 +6,25 @@ on:
       - main
 
 jobs:
+  all-status-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs:
+      - dockerfile-lint
+      - yaml-lint
+      - markdown-lint
+      - shell-lint
+      - action-lint
+      - dotenv-lint
+      - build-test
+      - type-check
+      - lint-check
+      - vitest-test
+      - docker-build-check
+    steps:
+      - name: All status check
+        run: echo "All status check passed"
+
   dockerfile-lint:
     runs-on: ubuntu-latest
     timeout-minutes: 10
