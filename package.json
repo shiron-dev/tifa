@@ -24,7 +24,7 @@
     "@shiron-dev/eslint-config": "^1.7.0",
     "@types/node": "^22.7.7",
     "nock": "^13.5.5",
-    "smee-client": "^2.0.3",
+    "smee-client": "^2.0.4",
     "typescript": "^5.6.3",
     "vitest": "^2.1.3"
   }
