@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@shiron-dev/eslint-config"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
-}
