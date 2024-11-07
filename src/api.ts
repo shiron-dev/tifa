@@ -1,7 +1,5 @@
 import type { Octokit } from "@octokit/core";
 
-import "dotenv/config";
-
 export async function markAllRenovateMergedNotificationsAsDone(
   octokit: Octokit,
 ) {
