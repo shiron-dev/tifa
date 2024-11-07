@@ -1,14 +1,17 @@
 import type { Octokit } from "@octokit/core";
-import process from "node:process";
 
 import "dotenv/config";
 
-export async function markAllRenovateMergedNotificationsAsDone(octokit: Octokit) {
+export async function markAllRenovateMergedNotificationsAsDone(
+  octokit: Octokit,
+) {
   try {
     let page = 1;
     let hasMorePages = true;
 
     while (hasMorePages) {
+      // eslint-disable-next-line no-console
+      console.log(`page: ${page}`);
       const { data: notifications } = await octokit.request(
         "GET /notifications",
         {
@@ -34,12 +37,17 @@ export async function markAllRenovateMergedNotificationsAsDone(octokit: Octokit)
           `GET /repos/${repository.full_name}/pulls/${prNumber}`,
         );
         const prData = prResponse.data;
+        const limit = prResponse.headers["x-ratelimit-remaining"];
 
-        process.stdout.write(prData.user.login, prData.merged);
         if (prData.user.login === "renovate[bot]" && prData.merged) {
-          await octokit.request(
-            `DELETE /notifications/threads/${threadId}`,
-          );
+          await octokit.request(`DELETE /notifications/threads/${threadId}`);
+
+          // eslint-disable-next-line no-console
+          console.log(`done ${limit} ${prData.repo.full_name} : ${prData.title}`);
+        }
+        else {
+          // eslint-disable-next-line no-console
+          console.log(`${limit} ${prData.user.login} : ${prData.merged}`);
         }
       }
 

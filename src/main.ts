@@ -8,4 +8,4 @@ async function main() {
   await markAllRenovateMergedNotificationsAsDone(octokit);
 }
 
-export default main;
+main();
