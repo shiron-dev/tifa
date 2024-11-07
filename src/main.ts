@@ -1,15 +1,11 @@
-import type { Probot } from "probot";
+import process from "node:process";
+import { Octokit } from "@octokit/core";
 
-export default (app: Probot) => {
-  app.on("issues.opened", async (context) => {
-    const issueComment = context.issue({
-      body: "Thanks for opening this issue!",
-    });
-    await context.octokit.issues.createComment(issueComment);
-  });
-  // For more information on building apps:
-  // https://probot.github.io/docs/
+import { markAllRenovateMergedNotificationsAsDone } from "./api";
 
-  // To get your app running against GitHub, see:
-  // https://probot.github.io/docs/development/
-};
+async function main() {
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+  await markAllRenovateMergedNotificationsAsDone(octokit);
+}
+
+export default main;
