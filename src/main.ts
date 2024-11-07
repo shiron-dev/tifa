@@ -1,4 +1,4 @@
-import { Probot } from "probot";
+import type { Probot } from "probot";
 
 export default (app: Probot) => {
   app.on("issues.opened", async (context) => {

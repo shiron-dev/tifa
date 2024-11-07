@@ -43,7 +43,7 @@ jobs:
       - uses: reviewdog/action-yamllint@v1.19.0
         with:
           level: warning
-          yamllint_flags: "-c .yamllint ."
+          yamllint_flags: -c .yamllint .
           fail_on_error: true
 
   markdown-lint:
@@ -102,7 +102,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: pnpm
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
@@ -122,7 +122,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: pnpm
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
@@ -142,7 +142,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: pnpm
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
@@ -162,7 +162,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: pnpm
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
