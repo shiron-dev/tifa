@@ -1,0 +1,20 @@
+name: cron
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  tifa-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run start
+        run: pnpm run start
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
