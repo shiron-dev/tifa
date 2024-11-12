@@ -1,5 +1,5 @@
 import process from "node:process";
-import { Octokit } from "@octokit/core";
+import { Octokit } from "@octokit/rest";
 
 import { markAllRenovateMergedNotificationsAsDone } from "./api";
 
