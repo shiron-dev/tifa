@@ -3,11 +3,16 @@ import { Octokit } from "@octokit/core";
 
 import { markAllRenovateMergedNotificationsAsDone } from "./api";
 
-import "dotenv/config"
+import "dotenv/config";
 
 async function main() {
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   await markAllRenovateMergedNotificationsAsDone(octokit);
 }
 
-main();
+try {
+  main();
+}
+catch (error) {
+  console.error("Error processing notifications:", error);
+}
