@@ -32,8 +32,7 @@ export async function markAllRenovateMergedNotificationsAsDone(
 
         const prNumber = Number(subject.url.split("/").pop());
         if (!repository.owner.name) {
-          // eslint-disable-next-line no-console
-          console.log(`owner: ${repository.owner.name}`);
+          console.error(`error owner: ${repository.owner.name}`);
           continue;
         }
 
