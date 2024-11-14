@@ -15,4 +15,5 @@ try {
 }
 catch (error) {
   console.error("Error processing notifications:", error);
+  process.exit(1);
 }
