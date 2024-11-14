@@ -1,4 +1,4 @@
-import type { Octokit } from "@octokit/core";
+import type { Octokit } from "@octokit/rest";
 
 export async function markAllRenovateMergedNotificationsAsDone(
   octokit: Octokit,
@@ -10,8 +10,7 @@ export async function markAllRenovateMergedNotificationsAsDone(
     while (hasMorePages) {
       // eslint-disable-next-line no-console
       console.log(`page: ${page}`);
-      const { data: notifications } = await octokit.request(
-        "GET /notifications",
+      const { data: notifications } = await octokit.rest.activity.listNotificationsForAuthenticatedUser(
         {
           all: false,
           page,
@@ -25,23 +24,35 @@ export async function markAllRenovateMergedNotificationsAsDone(
       }
 
       for (const notification of notifications) {
-        const { subject, repository, id: threadId } = notification;
+        const { subject, repository } = notification;
+        const threadId = Number(notification.id);
 
         if (subject.type !== "PullRequest")
           continue;
 
-        const prNumber = subject.url.split("/").pop();
-        const prResponse = await octokit.request(
-          `GET /repos/${repository.full_name}/pulls/${prNumber}`,
+        const prNumber = Number(subject.url.split("/").pop());
+        if (!repository.owner.name) {
+          console.error(`error owner: ${repository.owner.name}`);
+          continue;
+        }
+
+        const prResponse = await octokit.rest.pulls.get(
+          {
+            owner: repository.owner.name,
+            repo: repository.name,
+            pull_number: prNumber,
+          },
         );
         const prData = prResponse.data;
         const limit = prResponse.headers["x-ratelimit-remaining"];
 
         if (prData.user.login === "renovate[bot]" && prData.merged) {
-          await octokit.request(`DELETE /notifications/threads/${threadId}`);
+          await octokit.rest.activity.markThreadAsDone({
+            thread_id: threadId,
+          });
 
           // eslint-disable-next-line no-console
-          console.log(`done ${limit} ${prData.repo.full_name} : ${prData.title}`);
+          console.log(`done ${limit} ${repository.full_name} : ${prData.title}`);
         }
         else {
           // eslint-disable-next-line no-console
