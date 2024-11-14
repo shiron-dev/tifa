@@ -31,14 +31,14 @@ export async function markAllRenovateMergedNotificationsAsDone(
           continue;
 
         const prNumber = Number(subject.url.split("/").pop());
-        if (!repository.owner.name) {
-          console.error(`error owner: ${repository.owner.name}`);
+        if (!repository.owner.login) {
+          console.error(`error owner: ${repository.owner.login}`);
           continue;
         }
 
         const prResponse = await octokit.rest.pulls.get(
           {
-            owner: repository.owner.name,
+            owner: repository.owner.login,
             repo: repository.name,
             pull_number: prNumber,
           },
