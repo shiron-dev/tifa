@@ -10,10 +10,4 @@ async function main() {
   await markAllRenovateMergedNotificationsAsDone(octokit);
 }
 
-try {
-  main();
-}
-catch (error) {
-  console.error("Error processing notifications:", error);
-  process.exit(1);
-}
+main();
