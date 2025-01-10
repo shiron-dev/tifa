@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/shiron-dev/tifa/compare/v1.0.0...v1.0.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* add try catch ([#34](https://github.com/shiron-dev/tifa/issues/34)) ([f34d5c0](https://github.com/shiron-dev/tifa/commit/f34d5c0ca2e4ab7cdb04a1db7d32a4f871360c85))
+* error handling ([#45](https://github.com/shiron-dev/tifa/issues/45)) ([44d857e](https://github.com/shiron-dev/tifa/commit/44d857e4a33332caa0a8152c4879fca2b3ce84aa))
+* owner name bug ([#37](https://github.com/shiron-dev/tifa/issues/37)) ([c3d43d3](https://github.com/shiron-dev/tifa/commit/c3d43d36eca2652cbe6065ce05ed4d9d5668d922))
+* type error ([#36](https://github.com/shiron-dev/tifa/issues/36)) ([649a40d](https://github.com/shiron-dev/tifa/commit/649a40d76d15f1cd23850de5326abdb351b455e9))
+
 ## 1.0.0 (2024-11-07)
 
 
