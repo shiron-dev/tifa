@@ -62,3 +62,54 @@ export async function markAllRenovateMergedNotificationsAsDone(
     page += 1;
   }
 }
+
+function getPastDateByHours(hours: number): string {
+  const pastDate = new Date();
+  pastDate.setTime(pastDate.getTime() - hours * 60 * 60 * 1000); // 指定時間分、過去に遡る
+  const year = pastDate.getFullYear();
+  const month = String(pastDate.getMonth() + 1).padStart(2, "0");
+  const day = String(pastDate.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+interface SearchIssuesAndPullRequest {
+  title: string
+  url: string
+}
+
+export async function searchOldReviewRequestedPullRequests(octokit: Octokit, hours: number): Promise<SearchIssuesAndPullRequest[] | undefined> {
+  if (Number.isNaN(hours) || hours <= 0) {
+    console.error("error: hours is invalid.");
+    return;
+  }
+
+  const pastDate = getPastDateByHours(hours);
+  const query = `is:open is:pr review-requested:@me archived:false created:<${pastDate}`;
+
+  try {
+    const response = await octokit.rest.search.issuesAndPullRequests({
+      q: query,
+    });
+
+    if (response.data.items.length > 0) {
+      const ret: SearchIssuesAndPullRequest[] = [];
+
+      response.data.items.forEach((item) => {
+        if (item.pull_request) {
+          ret.push({
+            title: item.title,
+            url: item.html_url,
+          });
+        }
+      });
+
+      return ret;
+    }
+  }
+  catch (error: any) {
+    console.error("error:", error.message);
+    if (error.status === 403) {
+      console.error("API rate limit exceeded.");
+    }
+  }
+}

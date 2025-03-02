@@ -18,3 +18,5 @@ jobs:
         run: pnpm run start
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          REVIEW_REQUESTED_HOURS: 3
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
