@@ -84,7 +84,7 @@ export async function searchOldReviewRequestedPullRequests(octokit: Octokit, hou
   }
 
   const pastDate = getPastDateByHours(hours);
-  const query = `is:open is:pr review-requested:@me archived:false created:<${pastDate}`;
+  const query = `is:open is:pr review-requested:@me archived:false review:none created:<${pastDate}`;
 
   try {
     const response = await octokit.rest.search.issuesAndPullRequests({
