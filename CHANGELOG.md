@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/shiron-dev/tifa/compare/v1.0.1...v1.1.0) (2025-03-02)
+
+
+### Features
+
+* add pr notify ([#101](https://github.com/shiron-dev/tifa/issues/101)) ([f8b22ef](https://github.com/shiron-dev/tifa/commit/f8b22ef695419c4ceed7c97345a072a08c1dfd4b))
+
 ## [1.0.1](https://github.com/shiron-dev/tifa/compare/v1.0.0...v1.0.1) (2025-01-10)
 
 
