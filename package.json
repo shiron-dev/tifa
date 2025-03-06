@@ -22,7 +22,7 @@
     "@octokit/rest": "21.1.1",
     "@shiron-dev/eslint-config": "2.1.1",
     "@swc-node/register": "1.10.9",
-    "@types/node": "22.13.8",
+    "@types/node": "22.13.9",
     "dotenv": "16.4.7",
     "eslint": "9.21.0",
     "eslint-plugin-format": "1.0.1",
