@@ -27,6 +27,6 @@
     "eslint": "9.21.0",
     "eslint-plugin-format": "1.0.1",
     "typescript": "5.8.2",
-    "vitest": "3.0.7"
+    "vitest": "3.0.8"
   }
 }
