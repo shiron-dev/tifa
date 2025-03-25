@@ -32,15 +32,7 @@ jobs:
     if: ${{ needs.release-please.outputs.release-created }}
     steps:
       - uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+      - uses: shiron-dev/actions/setup-node@457cbf0c78dedf1bd4b15141781d9e52f199753a # v1.3.1
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 # TODO: Add a step to deploy the application
