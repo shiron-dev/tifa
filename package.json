@@ -23,7 +23,7 @@
     "@shiron-dev/eslint-config": "2.1.1",
     "@swc-node/register": "1.11.1",
     "@types/node": "22.18.8",
-    "dotenv": "17.2.2",
+    "dotenv": "17.2.3",
     "eslint": "9.36.0",
     "eslint-plugin-format": "1.0.2",
     "typescript": "5.9.2",
