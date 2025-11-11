@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/shiron-dev/tifa/compare/v1.2.0...v1.2.1) (2025-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node-fetch to ^2.6.13 ([#184](https://github.com/shiron-dev/tifa/issues/184)) ([d49284d](https://github.com/shiron-dev/tifa/commit/d49284d4a01308908c2305d0f2190d08d634582e))
+
 ## [1.2.0](https://github.com/shiron-dev/tifa/compare/v1.1.0...v1.2.0) (2025-03-02)
 
 
