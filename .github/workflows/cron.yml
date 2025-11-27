@@ -9,7 +9,7 @@ jobs:
   tifa-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: shiron-dev/actions/setup-node@9e2029b6bf55740748a5eace94dc93d97a1496ba # v1.5.2
       - name: Run install
         run: |
