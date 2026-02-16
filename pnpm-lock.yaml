@@ -28,8 +28,8 @@ importers:
         specifier: 24.10.13
         version: 24.10.13
       dotenv:
-        specifier: 17.3.0
-        version: 17.3.0
+        specifier: 17.3.1
+        version: 17.3.1
       eslint:
         specifier: 9.39.2
         version: 9.39.2
@@ -1135,8 +1135,8 @@ packages:
     resolution: {integrity: sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
 
-  dotenv@17.3.0:
-    resolution: {integrity: sha512-i3z5dx/8F45f+Dj0B/qG8oKip9luzyHz6dfJMOKG7zQW/12tT7CrIjs/0J10uNK/Z5O7O0UtfEmx6yFKRQCl4g==}
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -3192,7 +3192,7 @@ snapshots:
 
   diff-sequences@27.5.1: {}
 
-  dotenv@17.3.0: {}
+  dotenv@17.3.1: {}
 
   dunder-proto@1.0.1:
     dependencies:
