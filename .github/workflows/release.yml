@@ -32,7 +32,7 @@ jobs:
     if: ${{ needs.release-please.outputs.release-created }}
     steps:
       - uses: actions/checkout@v6
-      - uses: shiron-dev/actions/setup-node@9e2029b6bf55740748a5eace94dc93d97a1496ba # v1.5.2
+      - uses: shiron-dev/actions/setup-node@07414f04b70ca17f5736f93feec90cc20905e009 # v1.6.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 # TODO: Add a step to deploy the application
