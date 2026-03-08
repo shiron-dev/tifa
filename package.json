@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "22.0.1",
-    "@shiron-dev/eslint-config": "2.1.4",
+    "@shiron-dev/eslint-config": "2.1.5",
     "@swc-node/register": "1.11.1",
     "@types/node": "24.11.0",
     "dotenv": "17.3.1",
