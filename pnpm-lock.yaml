@@ -20,7 +20,7 @@ importers:
         version: 22.0.1
       '@shiron-dev/eslint-config':
         specifier: 2.1.5
-        version: 2.1.5(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@1.5.0(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))
+        version: 2.1.5(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@2.0.1(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))
       '@swc-node/register':
         specifier: 1.11.1
         version: 1.11.1(@swc/core@1.15.18)(@swc/types@0.1.25)(typescript@5.9.3)
@@ -34,8 +34,8 @@ importers:
         specifier: 10.0.3
         version: 10.0.3
       eslint-plugin-format:
-        specifier: 1.5.0
-        version: 1.5.0(eslint@10.0.3)
+        specifier: 2.0.1
+        version: 2.0.1(eslint@10.0.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -1383,8 +1383,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-format@1.5.0:
-    resolution: {integrity: sha512-jaeOKrxs79Nn6rMkLycPkLHvBVKcgsFG+RqNXb6W9iS9y2Q0NYGhFTLcDUdp5mf01X99wEkjtX2O8cumM7lNMQ==}
+  eslint-plugin-format@2.0.1:
+    resolution: {integrity: sha512-0BA65p5DAiuKtx5MmMJfPk9WaTjoHHbyVW7ZXRhaZoA1fdiMHhay9QRiDL2wr0hJWZxdF7CRThOK/70VUKVg2g==}
     peerDependencies:
       eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
 
@@ -2323,7 +2323,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@1.5.0(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))':
+  '@antfu/eslint-config@7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@2.0.1(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.1.0
@@ -2363,7 +2363,7 @@ snapshots:
       vue-eslint-parser: 10.4.0(eslint@10.0.3)
       yaml-eslint-parser: 2.0.0
     optionalDependencies:
-      eslint-plugin-format: 1.5.0(eslint@10.0.3)
+      eslint-plugin-format: 2.0.1(eslint@10.0.3)
     transitivePeerDependencies:
       - '@eslint/json'
       - '@typescript-eslint/rule-tester'
@@ -2864,9 +2864,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
 
-  '@shiron-dev/eslint-config@2.1.5(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@1.5.0(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))':
+  '@shiron-dev/eslint-config@2.1.5(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@2.0.1(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))':
     dependencies:
-      '@antfu/eslint-config': 7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@1.5.0(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))
+      '@antfu/eslint-config': 7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-plugin-format@2.0.1(eslint@10.0.3))(eslint@10.0.3)(typescript@5.9.3)(vitest@4.0.18(@types/node@24.12.0)(yaml@2.8.2))
     transitivePeerDependencies:
       - '@angular-eslint/eslint-plugin'
       - '@angular-eslint/eslint-plugin-template'
@@ -3460,7 +3460,7 @@ snapshots:
       eslint: 10.0.3
       eslint-compat-utils: 0.5.1(eslint@10.0.3)
 
-  eslint-plugin-format@1.5.0(eslint@10.0.3):
+  eslint-plugin-format@2.0.1(eslint@10.0.3):
     dependencies:
       '@dprint/formatter': 0.5.1
       '@dprint/markdown': 0.21.1
