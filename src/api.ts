@@ -26,9 +26,15 @@ export async function markAllRenovateMergedNotificationsAsDone(
     for (const notification of notifications) {
       const { subject, repository } = notification;
       const threadId = Number(notification.id);
+      const subjectUrl = subject.url;
+
+      if (!subjectUrl) {
+        console.warn(`skip notification with missing subject.url: ${notification.id} (${subject.type})`);
+        continue;
+      }
 
       if (subject.type === "CheckSuite") {
-        const checkSuite = await octokit.request(`GET ${subject.url}`);
+        const checkSuite = await octokit.request(`GET ${subjectUrl}`);
 
         if (isFailedConclusion(checkSuite.data.conclusion)) {
           await octokit.rest.activity.markThreadAsDone({
@@ -45,7 +51,11 @@ export async function markAllRenovateMergedNotificationsAsDone(
       if (subject.type !== "PullRequest")
         continue;
 
-      const prNumber = Number(subject.url.split("/").pop());
+      const prNumber = Number(subjectUrl.split("/").pop());
+      if (Number.isNaN(prNumber)) {
+        console.error(`error pull_number: ${subjectUrl}`);
+        continue;
+      }
       if (!repository.owner.login) {
         console.error(`error owner: ${repository.owner.login}`);
         continue;
