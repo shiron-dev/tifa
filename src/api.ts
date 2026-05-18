@@ -3,6 +3,7 @@ import type { Octokit } from "@octokit/rest";
 export async function markAllRenovateMergedNotificationsAsDone(
   octokit: Octokit,
 ) {
+  const isFailedConclusion = (conclusion?: string | null): boolean => conclusion === "failure";
   let page = 1;
   let hasMorePages = true;
 
@@ -25,6 +26,21 @@ export async function markAllRenovateMergedNotificationsAsDone(
     for (const notification of notifications) {
       const { subject, repository } = notification;
       const threadId = Number(notification.id);
+
+      if (subject.type === "CheckSuite") {
+        const checkSuite = await octokit.request(`GET ${subject.url}`);
+
+        if (isFailedConclusion(checkSuite.data.conclusion)) {
+          await octokit.rest.activity.markThreadAsDone({
+            thread_id: threadId,
+          });
+
+          // eslint-disable-next-line no-console
+          console.log(`done failed check suite: ${repository.full_name} : ${subject.title}`);
+        }
+
+        continue;
+      }
 
       if (subject.type !== "PullRequest")
         continue;
@@ -52,11 +68,11 @@ export async function markAllRenovateMergedNotificationsAsDone(
 
         // eslint-disable-next-line no-console
         console.log(`done ${limit} ${repository.full_name} : ${prData.title}`);
+        continue;
       }
-      else {
-        // eslint-disable-next-line no-console
-        console.log(`${limit} ${prData.user.login} : ${prData.merged}`);
-      }
+
+      // eslint-disable-next-line no-console
+      console.log(`${limit} ${prData.user.login} : ${prData.merged}`);
     }
 
     page += 1;
