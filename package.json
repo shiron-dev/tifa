@@ -24,7 +24,7 @@
     "@swc-node/register": "1.11.1",
     "@types/node": "24.12.4",
     "dotenv": "17.4.2",
-    "eslint": "10.3.0",
+    "eslint": "10.4.0",
     "eslint-plugin-format": "2.0.1",
     "typescript": "5.9.3",
     "vitest": "4.1.6"
