@@ -81,7 +81,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: shiron-dev/actions/setup-node@84397408739dd8be5cab53d443ae764501063dab # v1.6.4
+      - uses: shiron-dev/actions/setup-node@d66efb301f140b377987e9cb9d49baa97b950765 # v1.6.5
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
@@ -93,7 +93,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: shiron-dev/actions/setup-node@84397408739dd8be5cab53d443ae764501063dab # v1.6.4
+      - uses: shiron-dev/actions/setup-node@d66efb301f140b377987e9cb9d49baa97b950765 # v1.6.5
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
@@ -105,7 +105,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: shiron-dev/actions/setup-node@84397408739dd8be5cab53d443ae764501063dab # v1.6.4
+      - uses: shiron-dev/actions/setup-node@d66efb301f140b377987e9cb9d49baa97b950765 # v1.6.5
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
