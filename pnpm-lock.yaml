@@ -19,8 +19,8 @@ importers:
         specifier: 22.0.1
         version: 22.0.1
       '@shiron-dev/eslint-config':
-        specifier: 2.1.5
-        version: 2.1.5(@typescript-eslint/rule-tester@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.61.1(typescript@5.9.3))(@typescript-eslint/utils@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@vue/compiler-sfc@3.5.38)(eslint-plugin-format@2.0.1(eslint@10.5.0))(eslint@10.5.0)(typescript@5.9.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.0.16(@types/node@24.13.2)(yaml@2.9.0)))
+        specifier: 2.1.6
+        version: 2.1.6(@typescript-eslint/rule-tester@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.61.1(typescript@5.9.3))(@typescript-eslint/utils@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@vue/compiler-sfc@3.5.38)(eslint-plugin-format@2.0.1(eslint@10.5.0))(eslint@10.5.0)(typescript@5.9.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.0.16(@types/node@24.13.2)(yaml@2.9.0)))
       '@swc-node/register':
         specifier: 1.11.1
         version: 1.11.1(@swc/core@1.15.41)(@swc/types@0.1.27)(typescript@5.9.3)
@@ -663,8 +663,8 @@ packages:
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
 
-  '@shiron-dev/eslint-config@2.1.5':
-    resolution: {integrity: sha512-TzgLedUt/KkqkvppzZz43HgA5NCzXvX/4/7dF7+vghd/N+Rjhw2/j9MIV9vi54uNQwRwMVscl9qGlQvErBp85w==}
+  '@shiron-dev/eslint-config@2.1.6':
+    resolution: {integrity: sha512-jX4Ke2VJvHbKxa7t2dH+V3Ws5c3ID+AzyoGx8TxveUjrqiqKIfyMQfcb9Zuy0IFEGse+QBJUvghCUNZuarPW1A==}
 
   '@sindresorhus/base62@1.0.0':
     resolution: {integrity: sha512-TeheYy0ILzBEI/CO55CP6zJCSdSWeRtGnHy8U8dWSUH4I68iqTsy7HkMktR4xakThc9jotkPQUXT4ITdbV7cHA==}
@@ -2762,7 +2762,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.1': {}
 
-  '@shiron-dev/eslint-config@2.1.5(@typescript-eslint/rule-tester@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.61.1(typescript@5.9.3))(@typescript-eslint/utils@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@vue/compiler-sfc@3.5.38)(eslint-plugin-format@2.0.1(eslint@10.5.0))(eslint@10.5.0)(typescript@5.9.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.0.16(@types/node@24.13.2)(yaml@2.9.0)))':
+  '@shiron-dev/eslint-config@2.1.6(@typescript-eslint/rule-tester@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.61.1(typescript@5.9.3))(@typescript-eslint/utils@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@vue/compiler-sfc@3.5.38)(eslint-plugin-format@2.0.1(eslint@10.5.0))(eslint@10.5.0)(typescript@5.9.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.0.16(@types/node@24.13.2)(yaml@2.9.0)))':
     dependencies:
       '@antfu/eslint-config': 7.7.3(@typescript-eslint/rule-tester@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.61.1(typescript@5.9.3))(@typescript-eslint/utils@8.61.1(eslint@10.5.0)(typescript@5.9.3))(@vue/compiler-sfc@3.5.38)(eslint-plugin-format@2.0.1(eslint@10.5.0))(eslint@10.5.0)(typescript@5.9.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.0.16(@types/node@24.13.2)(yaml@2.9.0)))
     transitivePeerDependencies:
