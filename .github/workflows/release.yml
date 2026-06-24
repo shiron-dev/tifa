@@ -17,7 +17,7 @@ jobs:
     outputs:
       release-created: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0
       - name: Release please
@@ -31,7 +31,7 @@ jobs:
     needs: release-please
     if: ${{ needs.release-please.outputs.release-created }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - uses: shiron-dev/actions/setup-node@8780bd20d1ef046844aa1a1c2e9d96fefaa1384b # v1.7.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
