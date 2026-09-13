@@ -38,7 +38,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: reviewdog/action-markdownlint@8a6529a4b8ffbb3193a55a255bedd31989a67fc2 # v0.29.0
+      - uses: reviewdog/action-markdownlint@35165bd1319a53e25f413032556f5f1fbfe6cb63 # v0.29.1
         with:
           level: warning
           fail_on_error: true
