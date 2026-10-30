@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: reviewdog/action-yamllint@072d1a6ca6f5a03de10f492f6119fcbc8d47302b # v1.25.4
         with:
           level: warning
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: reviewdog/action-markdownlint@f8e8c509d6e706db79bb39c1c506c968f1a66b82 # v0.32.0
         with:
           level: warning
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: reviewdog/action-shellcheck@d0b8d5fd7fad6afdb6e1b6ce1778892be4d1f427 # v1.34.1
         with:
           level: warning
@@ -60,7 +60,7 @@ jobs:
   action-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: reviewdog/action-actionlint@cfa6a621f27735ccc88d35af9d0608692fd9b9f7 # v1.80.8
         with:
           level: warning
@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: dotenv-linter/action-dotenv-linter@afde61cfda2ecffe7bea35837b6f20b956c88689 # v3.0.0
         with:
           dotenv_linter_flags: --skip UnorderedKey
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: shiron-dev/actions/setup-node@8780bd20d1ef046844aa1a1c2e9d96fefaa1384b # v1.7.0
       - name: Run install
         run: |
@@ -92,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: shiron-dev/actions/setup-node@8780bd20d1ef046844aa1a1c2e9d96fefaa1384b # v1.7.0
       - name: Run install
         run: |
@@ -104,7 +104,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: shiron-dev/actions/setup-node@8780bd20d1ef046844aa1a1c2e9d96fefaa1384b # v1.7.0
       - name: Run install
         run: |
